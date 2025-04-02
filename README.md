@@ -18,6 +18,7 @@ Time Off is a leave request application that allows employees to submit leave re
 
 * [![Vite][Vite]][Vite-url]
 * [![Svelte][Svelte]][Svelte-url]
+* [![Bootstrap][Bootstrap]][Bootstrap-url]
 * [![Node.js][Node.js]][Node-url]
 * [![Express.js][Express.js]][Express-url]
 * [![MongoDB][MongoDB]][Mongo-url]
@@ -57,3 +58,5 @@ This is what Time Off is all about.
 [Express-url]: https://expressjs.com/
 [MongoDB]: https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white
 [Mongo-url]: https://www.mongodb.com/
+[Bootstrap]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com/
