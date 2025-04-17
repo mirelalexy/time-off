@@ -1,5 +1,5 @@
 <script >
-    import { link } from 'svelte-spa-router';
+    import { link, push } from 'svelte-spa-router';
     import CircleUser from "lucide-svelte/icons/circle-user";
     import Menu from "lucide-svelte/icons/menu";
     import Search from "lucide-svelte/icons/search";
@@ -72,9 +72,9 @@
           <DropdownMenu.Content align="end">
             <DropdownMenu.Label>My Account</DropdownMenu.Label>
             <DropdownMenu.Separator />
-            <DropdownMenu.Item>Settings</DropdownMenu.Item>
+            <DropdownMenu.Item on:click={() => push('/employeeportal/settings')}>Settings</DropdownMenu.Item>
             <DropdownMenu.Separator />
-            <DropdownMenu.Item>Logout</DropdownMenu.Item>
+            <DropdownMenu.Item on:click={() => push('/')}>Logout</DropdownMenu.Item>
           </DropdownMenu.Content>
         </DropdownMenu.Root>
       </div>

@@ -8,6 +8,7 @@
 	import ManagerPortal from './routes/ManagerPortal.svelte';
 	import ConfirmAccount from './routes/ConfirmAccount.svelte';
 	import ResetPassword from './routes/ResetPassword.svelte';
+	import Settings from './routes/Settings.svelte';
  	import { ModeWatcher } from "mode-watcher";
 </script>
  
@@ -19,6 +20,7 @@
 	'/signup': SignUp,
 	'/employeeportal/dashboard': EmployeePortal,
 	'/employeeportal/new': NewRequest,
+	'/employeeportal/settings': Settings,
 	'/managerportal': ManagerPortal,
 	'/confirm': ConfirmAccount,
 	'/reset': ResetPassword
