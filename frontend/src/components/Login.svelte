@@ -37,7 +37,7 @@
           </div>
           </Card.Content>
           <Card.Footer>
-           <Button on:click={() => push('/employeeportal')} class="w-full">Log In As Employee</Button>
+           <Button on:click={() => push('/employeeportal/dashboard')} class="w-full">Log In As Employee</Button>
           </Card.Footer>
          </Card.Root>
         </Tabs.Content>

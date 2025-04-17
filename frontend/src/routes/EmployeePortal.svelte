@@ -1,1 +1,5 @@
-<p1>This is the Employee Portal!</p1>
+<script>
+    import EmployeeDashboard from '../components/EmployeeDashboard.svelte';
+</script>
+
+<EmployeeDashboard/>

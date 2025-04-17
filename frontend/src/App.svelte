@@ -4,6 +4,7 @@
     import Home from './routes/Home.svelte';
 	import SignUp from './routes/SignUp.svelte';
 	import EmployeePortal from './routes/EmployeePortal.svelte';
+	import NewRequest from './routes/NewRequest.svelte';
 	import ManagerPortal from './routes/ManagerPortal.svelte';
 	import ConfirmAccount from './routes/ConfirmAccount.svelte';
 	import ResetPassword from './routes/ResetPassword.svelte';
@@ -16,7 +17,8 @@
 <Router routes={{
     '/': Home,
 	'/signup': SignUp,
-	'/employeeportal': EmployeePortal,
+	'/employeeportal/dashboard': EmployeePortal,
+	'/employeeportal/new': NewRequest,
 	'/managerportal': ManagerPortal,
 	'/confirm': ConfirmAccount,
 	'/reset': ResetPassword

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import { push } from 'svelte-spa-router';
     import { Button } from "$lib/components/ui/button/index.js";
     import * as Card from "$lib/components/ui/card/index.js";
