@@ -21,7 +21,7 @@
   
 <div class="min-h-screen flex flex-col">
     <Header />
-    <main class="flex flex-1 items-center justify-center p-4 md:p-8">
+    <main class="bg-muted/40 flex flex-1 items-center justify-center p-4 md:p-8">
         <div class="max-w-lg w-full space-y-6">
         <Card.Root>
           <Card.Header>
