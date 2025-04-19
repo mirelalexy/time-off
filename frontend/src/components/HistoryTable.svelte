@@ -3,9 +3,8 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Card from "$lib/components/ui/card/index.js";
   import * as Table from "$lib/components/ui/table/index.js";
-  import { Badge } from "$lib/components/ui/badge/index.js";
-  import * as Avatar from "$lib/components/ui/avatar/index.js";
   import HistoryTableRow from "./HistoryTableRow.svelte";
+  import { push } from "svelte-spa-router";
 </script>
 
 <Card.Root class="xl:col-span-2">
@@ -14,7 +13,7 @@
     <Card.Title>History</Card.Title>
     <Card.Description>View information on your past requests.</Card.Description>
   </div>
-  <Button href="##" size="sm" class="ml-auto gap-1">
+  <Button on:click={() => push('/employeeportal/history')} size="sm" class="ml-auto gap-1">
     View All
     <ArrowUpRight class="h-4 w-4" />
   </Button>

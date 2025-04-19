@@ -22,7 +22,7 @@
           New Request
         </a>
         <a use:link href="#/employeeportal/calendar" class="text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
-          Calendar View
+          Special Days
         </a>
       </nav>
       <Sheet.Root>
@@ -42,7 +42,7 @@
             <LogoSmall/>
             <a use:link href="#/employeeportal/dashboard" class="hover:text-foreground"> Dashboard </a>
             <a use:link href="#/employeeportal/new" class="text-muted-foreground hover:text-foreground"> New Request </a>
-            <a use:link href="#/employeeportal/calendar" class="text-muted-foreground hover:text-foreground"> Calendar View </a>
+            <a use:link href="#/employeeportal/calendar" class="text-muted-foreground hover:text-foreground"> Special Days </a>
           </nav>
         </Sheet.Content>
       </Sheet.Root>

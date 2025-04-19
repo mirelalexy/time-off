@@ -10,6 +10,7 @@
 	import ResetPassword from './routes/ResetPassword.svelte';
 	import Settings from './routes/Settings.svelte';
  	import { ModeWatcher } from "mode-watcher";
+  	import History from './routes/History.svelte';
 </script>
  
 <ModeWatcher />
@@ -20,6 +21,7 @@
 	'/signup': SignUp,
 	'/employeeportal/dashboard': EmployeePortal,
 	'/employeeportal/new': NewRequest,
+	'/employeeportal/history': History,
 	'/employeeportal/settings': Settings,
 	'/managerportal': ManagerPortal,
 	'/confirm': ConfirmAccount,
