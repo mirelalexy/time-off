@@ -39,6 +39,7 @@
             <Button>Save</Button>
           </Card.Footer>
         </Card.Root>
+
         <Card.Root>
           <Card.Header>
             <Card.Title>Email Address</Card.Title>
@@ -66,6 +67,32 @@
               <Input disabled placeholder="Software Engineer" value="Software Engineer"/>
             </form>
           </Card.Content>
+        </Card.Root>
+
+        <Card.Root>
+          <Card.Header>
+            <Card.Title>Change Password</Card.Title>
+            <Card.Description>
+              Update your password.
+            </Card.Description>
+          </Card.Header>
+          <Card.Content class="grid gap-4">
+              <div class="grid gap-3">
+                  <Label for="status">Current Password</Label>
+                  <form>
+                      <Input type="password"/>
+                  </form>
+              </div>
+              <div class="grid gap-3">
+                  <Label for="status">New Password</Label>
+                  <form>
+                      <Input type="password"/>
+                  </form>
+              </div>
+          </Card.Content>
+          <Card.Footer class="border-t px-6 py-4">
+            <Button>Save</Button>
+          </Card.Footer>
         </Card.Root>
 
         <Card.Root>
