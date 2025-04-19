@@ -14,9 +14,9 @@
     <Table.Cell>{request.endDate}</Table.Cell>
     <Table.Cell class="hidden md:table-cell">
       <div class="flex flex-row items-center gap-4">
-        <Avatar.Root>
-          <Avatar.Image src={request.managerAvatar} alt={request.managerName} />
-          <Avatar.Fallback>{request.managerInitials}</Avatar.Fallback>
+        <Avatar.Root class="w-8 h-8">
+          <Avatar.Image src={request.managerAvatar} alt={request.managerName} class="w-8 h-8"/>
+          <Avatar.Fallback class="w-8 h-8">{request.managerInitials}</Avatar.Fallback>
         </Avatar.Root>
         <p>{request.managerName}</p>
       </div>

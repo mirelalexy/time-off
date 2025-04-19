@@ -164,9 +164,9 @@
                       <Table.Cell>{birthday.date}</Table.Cell>
                       <Table.Cell>
                         <div class="flex flex-row items-center gap-4">
-                          <Avatar.Root>
-                            <Avatar.Image src={birthday.avatar} alt={birthday.name} />
-                            <Avatar.Fallback>{birthday.initials}</Avatar.Fallback>
+                          <Avatar.Root class="w-8 h-8">
+                            <Avatar.Image src={birthday.avatar} alt={birthday.name} class="w-8 h-8"/>
+                            <Avatar.Fallback class="w-8 h-8">{birthday.initials}</Avatar.Fallback>
                           </Avatar.Root>
                           <p>{birthday.name}</p>
                         </div>
