@@ -4,6 +4,7 @@
     import * as Card from "$lib/components/ui/card/index.js";
     import * as Table from "$lib/components/ui/table/index.js";
     import PendingTableRow from "./PendingTableRow.svelte";
+    import { push } from "svelte-spa-router";
 </script>
 
 <Card.Root class="xl:col-span-1">
@@ -12,7 +13,7 @@
 			<Card.Title>Pending</Card.Title>
 			<Card.Description>View information on your pending requests.</Card.Description>
 		</div>
-		<Button href="##" size="sm" class="ml-auto gap-1">
+		<Button on:click={() => push('/employeeportal/pending')} size="sm" class="ml-auto gap-1">
 			View All
 			<ArrowUpRight class="h-4 w-4" />
 		</Button>

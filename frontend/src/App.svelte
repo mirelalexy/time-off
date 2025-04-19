@@ -11,6 +11,7 @@
 	import Settings from './routes/Settings.svelte';
  	import { ModeWatcher } from "mode-watcher";
   	import History from './routes/History.svelte';
+	import Pending from './routes/Pending.svelte';
 </script>
  
 <ModeWatcher />
@@ -22,6 +23,7 @@
 	'/employeeportal/dashboard': EmployeePortal,
 	'/employeeportal/new': NewRequest,
 	'/employeeportal/history': History,
+	'/employeeportal/pending': Pending,
 	'/employeeportal/settings': Settings,
 	'/managerportal': ManagerPortal,
 	'/confirm': ConfirmAccount,
