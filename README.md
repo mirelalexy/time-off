@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Time Off is a leave request application that allows employees to submit leave requests and managers to submit leave requests and managers to approve or reject them efficiently. It includes features such as a dashboard, calendar view for upcoming holidays and birthdays, and email notifications to keep everyone updated.
+Time Off is a leave request application that allows employees to submit leave requests and managers to submit leave requests and managers to approve or reject them efficiently. It includes features such as a dashboard, views for upcoming holidays and birthdays, and email notifications to keep everyone updated.
 
 ### Built With
 
@@ -32,7 +32,7 @@ This is what Time Off is all about.
 
 ### Employee Portal
 
-* Employee Dashboard: Submit a leave request, view upcoming holidays, birthdays, pending and past requests, information on vacation days.
+* Employee Dashboard: Submit a leave request, view upcoming holiday, birthday, pending and past requests, information on vacation days.
 * New Request: Submit a leave request with category selection, date range, and reason.
 
 ### Manager Portal
@@ -42,7 +42,7 @@ This is what Time Off is all about.
 
 ### General
 
-* Calendar View: View upcoming holidays, approved leave days, and birthdays.
+* Special Days: View upcoming holidays and birthdays.
 * Profile: Edit name, profile picture, and change password.
 * Email Notifications: Automated emails for requests and approvals.
 
