@@ -29,7 +29,7 @@
     ];
 
     // pagination state
-    const itemsPerPage = 8;
+    const itemsPerPage = 6;
     let currentPage = 1;
     $: totalPages = Math.ceil(filteredRequests.length / itemsPerPage);
     $: startIndex = (currentPage - 1) * itemsPerPage;
