@@ -33,6 +33,7 @@
           <Table.Body>
             <HistoryTableRow/>
             <HistoryTableRow/>
+            <HistoryTableRow/>
           </Table.Body>
       </Table.Root>
   </Card.Content>
