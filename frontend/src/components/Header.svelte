@@ -1,17 +1,16 @@
-<script >
-    import { link, push, location } from "svelte-spa-router";
-    import CircleUser from "lucide-svelte/icons/circle-user";
-    import Menu from "lucide-svelte/icons/menu";
-    import Search from "lucide-svelte/icons/search";
-    import { Button } from "$lib/components/ui/button/index.js";
-    import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
-    import { Input } from "$lib/components/ui/input/index.js";
-    import * as Sheet from "$lib/components/ui/sheet/index.js";
-    import LogoSmall from "./LogoSmall.svelte";
+<script>
+  import { link, push, location } from "svelte-spa-router";
+  import CircleUser from "lucide-svelte/icons/circle-user";
+  import Menu from "lucide-svelte/icons/menu";
+  import Search from "lucide-svelte/icons/search";
+  import { Button } from "$lib/components/ui/button/index.js";
+  import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
+  import { Input } from "$lib/components/ui/input/index.js";
+  import * as Sheet from "$lib/components/ui/sheet/index.js";
+  import LogoSmall from "./LogoSmall.svelte";
 
-    // Normalize the href to match $location
+  // normalize the href to match $location
   function normalizePath(path) {
-    // Remove leading '#' if present and ensure consistent format
     return path.replace(/^#/, '');
   }
 </script>
