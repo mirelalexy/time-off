@@ -1,5 +1,5 @@
 <script >
-    import { link, push } from 'svelte-spa-router';
+    import { link, push, location } from "svelte-spa-router";
     import CircleUser from "lucide-svelte/icons/circle-user";
     import Menu from "lucide-svelte/icons/menu";
     import Search from "lucide-svelte/icons/search";
@@ -8,6 +8,12 @@
     import { Input } from "$lib/components/ui/input/index.js";
     import * as Sheet from "$lib/components/ui/sheet/index.js";
     import LogoSmall from "./LogoSmall.svelte";
+
+    // Normalize the href to match $location
+  function normalizePath(path) {
+    // Remove leading '#' if present and ensure consistent format
+    return path.replace(/^#/, '');
+  }
 </script>
   
 <header class="bg-background sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6">
@@ -15,13 +21,25 @@
         class="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6"
       >
         <LogoSmall/>
-        <a use:link href="#/employeeportal/dashboard" class="text-foreground hover:text-foreground transition-colors whitespace-nowrap">
+        <a use:link href="#/employeeportal/dashboard" 
+        class={$location === normalizePath('#/employeeportal/dashboard')
+        ? 'text-foreground whitespace-nowrap'
+        : 'text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap'}
+        >
           Dashboard
         </a>
-        <a use:link href="#/employeeportal/new" class="text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
+        <a use:link href="#/employeeportal/new" 
+        class={$location === normalizePath('#/employeeportal/new')
+        ? 'text-foreground whitespace-nowrap'
+        : 'text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap'}
+        >
           New Request
         </a>
-        <a use:link href="/employeeportal/special" class="text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
+        <a use:link href="/employeeportal/special" 
+        class={$location === normalizePath('#/employeeportal/special')
+        ? 'text-foreground whitespace-nowrap'
+        : 'text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap'}
+        >
           Special Days
         </a>
       </nav>
@@ -40,9 +58,27 @@
         <Sheet.Content side="left">
           <nav class="grid gap-6 text-lg font-medium">
             <LogoSmall/>
-            <a use:link href="#/employeeportal/dashboard" class="hover:text-foreground"> Dashboard </a>
-            <a use:link href="#/employeeportal/new" class="text-muted-foreground hover:text-foreground"> New Request </a>
-            <a use:link href="/employeeportal/special" class="text-muted-foreground hover:text-foreground"> Special Days </a>
+            <a use:link href="#/employeeportal/dashboard"
+            class={$location === normalizePath('#/employeeportal/dashboard')
+            ? 'text-foreground whitespace-nowrap'
+            : 'text-muted-foreground hover:text-foreground'}
+            >
+              Dashboard
+            </a>
+            <a use:link href="#/employeeportal/new" 
+            class={$location === normalizePath('#/employeeportal/new')
+            ? 'text-foreground whitespace-nowrap'
+            : 'text-muted-foreground hover:text-foreground'}
+            > 
+              New Request 
+            </a>
+            <a use:link href="/employeeportal/special"
+            class={$location === normalizePath('#/employeeportal/special')
+            ? 'text-foreground whitespace-nowrap'
+            : 'text-muted-foreground hover:text-foreground'}
+            > 
+              Special Days 
+            </a>
           </nav>
         </Sheet.Content>
       </Sheet.Root>
