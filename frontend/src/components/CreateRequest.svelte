@@ -40,15 +40,7 @@
                 />
               </div>
               <div class="grid gap-3">
-                <Label for="reason">Reason</Label>
-                <Textarea
-                  id="reason"
-                  bind:value={reason}
-                  class="min-h-32"
-                />
-              </div>
-              <div class="grid gap-3">
-                <Label for="status">Status*</Label>
+                <Label for="type">Type*</Label>
                 <Select.Root on:change={handleSelectChange}>
                   <Select.Trigger id="type" aria-label="Select type">
                     <Select.Value placeholder="Select type" />
@@ -66,6 +58,14 @@
               <div class="grid gap-3">
                 <Label for="category">Period*</Label>
                 <DataRangePicker />
+              </div>
+              <div class="grid gap-3">
+                <Label for="reason">Reason</Label>
+                <Textarea
+                  id="reason"
+                  bind:value={reason}
+                  class="min-h-32"
+                />
               </div>
               <div class="flex justify-center">
                 <Button variant="default">
