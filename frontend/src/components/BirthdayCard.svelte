@@ -1,18 +1,21 @@
 <script >
+    import { push } from "svelte-spa-router";
     import * as Card from "$lib/components/ui/card/index.js";
+    import { Button } from "$lib/components/ui/button/index.js";
+    import * as Avatar from "$lib/components/ui/avatar/index.js";
 
     export let employee;
-    export let birthday;
 </script>
   
 <Card.Root>
     <Card.Header>
         <p class="text-2xl font-semibold">It's {employee} birthday soon!</p>
-        <p>Planning something?</p>
     </Card.Header>
-    <Card.Content class="p-6 flex flex-row justify-center">
-        <div class="flex justify-center items-center w-24 h-24 bg-orange-500 rounded-lg">
-            <span class="text-[60px] font-bold text-white">{birthday}</span> <!-- fix span not in the middle of div because of line height -->
-        </div>
+    <Card.Content class="p-6 flex flex-col justify-center items-center gap-9">
+        <Avatar.Root class="w-16 h-16">
+            <Avatar.Image src=https://github.com/shadcn.png alt="bday" class="w-16 h-16"/>
+            <Avatar.Fallback class="w-16 h-16">LK</Avatar.Fallback>
+        </Avatar.Root>
+        <Button on:click={() => push('/employeeportal/special')} class="m-auto">See Birthdays</Button>
     </Card.Content>
 </Card.Root>
