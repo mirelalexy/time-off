@@ -65,7 +65,7 @@
               </div>
            </Card.Content>
            <Card.Footer>
-            <Button on:click={() => push('/managerportal')} class="w-full">Log In As Manager</Button>
+            <Button on:click={() => push('/managerportal/dashboard')} class="w-full">Log In As Manager</Button>
            </Card.Footer>
          </Card.Root>
         </Tabs.Content>

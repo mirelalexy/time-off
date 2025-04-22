@@ -1,1 +1,5 @@
-<p1>This is the Manager Portal!</p1>
+<script>
+  import ManagerDashboard from '../components/ManagerDashboard.svelte';
+</script>
+
+<ManagerDashboard/>
