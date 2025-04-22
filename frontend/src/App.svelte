@@ -13,6 +13,9 @@
   	import History from './routes/History.svelte';
 	import Pending from './routes/Pending.svelte';
 	import SpecialDays from './routes/SpecialDays.svelte';
+	import OutOfOffice from './routes/OutOfOffice.svelte';
+	import PendingManager from './routes/PendingManager.svelte';
+	import HistoryManager from './routes/HistoryManager.svelte';
 </script>
  
 <ModeWatcher />
@@ -27,7 +30,12 @@
 	'/employeeportal/pending': Pending,
 	'/employeeportal/special': SpecialDays,
 	'/employeeportal/settings': Settings,
-	'/managerportal': ManagerPortal,
+	'/managerportal/dashboard': ManagerPortal,
+	'/managerportal/outofoffice': OutOfOffice,
+	'/managerportal/special': SpecialDays,
+	'/managerportal/pending': PendingManager,
+	'/managerportal/history': HistoryManager,
+	'/managerportal/settings': Settings,
 	'/confirm': ConfirmAccount,
 	'/reset': ResetPassword
 }}/>
