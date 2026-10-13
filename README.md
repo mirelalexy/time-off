@@ -1,64 +1,89 @@
-<!-- PROJECT INFO -->
-<div align="center">
-<h3 align="center">Time Off</h3>
+# Time Off
 
-  <p align="center">
-    A leave request app built for Crayon.
-    <br />
-  </p>
-</div>
+A leave request app with separate portals for employees and managers. Built during my practice internship at Crayon.
 
+> **Status:** unfinished prototype. The interface is built (both portals), but there is no working backend yet: login just takes you to a portal, and the data you see is placeholder content. See [What's missing](#whats-missing).
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+![Employee dashboard](screenshots/employee-dashboard-dark.png)
 
-Time Off is a leave request application that allows employees to submit leave requests and managers to submit leave requests and managers to approve or reject them efficiently. It includes features such as a dashboard, views for upcoming holidays and birthdays, and email notifications to keep everyone updated.
+## What it does
 
-### Built With
+### Employee portal
+- **Dashboard:** vacation day balance, upcoming holidays and birthdays, and pending and past requests at a glance
+- **New request:** pick a category, a date range, and a reason
+- **Pending and history:** separate views for requests waiting on approval and past ones
+- **Special days:** upcoming holidays and birthdays
+- **Settings:** profile and password
 
-* [![Vite][Vite]][Vite-url]
-* [![Svelte][Svelte]][Svelte-url]
-* [![Node.js][Node.js]][Node-url]
-* [![Express.js][Express.js]][Express-url]
-* [![MongoDB][MongoDB]][Mongo-url]
-* [![Tailwind][TailwindCSS]][Tailwind-url]
-* [![ShadcnUI][Shadcn-svelte]][Shadcn-url]
-
-
-<!-- FEATURES -->
-## Features
-
-This is what Time Off is all about.
-
-### Employee Portal
-
-* Employee Dashboard: Submit a leave request, view upcoming holiday, birthday, pending and past requests, information on vacation days.
-* New Request: Submit a leave request with category selection, date range, and reason.
-
-### Manager Portal
-
-* Manager Dashboard: Approve/reject requests, track pending and past leave requests.
-* Out of Office: Monitor employee availability.
+### Manager portal
+- **Dashboard:** pending requests to approve or reject
+- **Out of office:** who's away and when
+- **Pending and history:** requests waiting on a decision and past ones
+- **Special days and settings**
 
 ### General
+- Sign up, email confirmation, and password reset screens
+- Light and dark mode
 
-* Special Days: View upcoming holidays and birthdays.
-* Profile: Edit name, profile picture, and change password.
-* Email Notifications: Automated emails for requests and approvals.
+## Screenshots
 
+| Employee dashboard | New request | Manager dashboard |
+| :---: | :---: | :---: |
+| ![Employee dashboard](screenshots/employee-dashboard.png) | ![New request](screenshots/new-request.png) | ![Manager dashboard](screenshots/manager-dashboard.png) |
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[Svelte]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte
-[Svelte-url]: https://svelte.dev/
-[Vite]: https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white
-[Vite-url]: https://vite.dev/
-[Node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white
-[Node-url]: https://nodejs.org/en
-[Express.js]: https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=express&logoColor=white
-[Express-url]: https://expressjs.com/
-[MongoDB]: https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white
-[Mongo-url]: https://www.mongodb.com/
-[TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/
-[Shadcn-svelte]: https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn/ui&logoColor=white
-[Shadcn-url]: https://www.shadcn-svelte.com/
+Dark mode:
+
+| Employee dashboard | New request | Manager dashboard |
+| :---: | :---: | :---: |
+| ![Employee dashboard, dark](screenshots/employee-dashboard-dark.png) | ![New request, dark](screenshots/new-request-dark.png) | ![Manager dashboard, dark](screenshots/manager-dashboard-dark.png) |
+
+*All data shown is placeholder content.*
+
+## Built with
+
+- **Frontend:** Svelte, Vite, Tailwind CSS, [shadcn-svelte](https://www.shadcn-svelte.com), svelte-spa-router
+- **Backend (def):** Node.js, Express, MongoDB (Mongoose)
+
+## Run it locally
+
+You'll need [Node.js](https://nodejs.org) 18 or newer.
+
+### Frontend
+
+```bash
+git clone https://github.com/mirelalexy/time-off.git
+cd time-off/frontend
+npm install
+npm run dev
+```
+
+Open the address Vite prints. On the login screen, use **Log In As Employee** or **Log In As Manager** to explore each portal.
+
+### Backend (optional)
+
+The backend only connects to MongoDB and answers a test request on `/`. To run it, create `backend/.env`:
+
+```
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+```
+
+```bash
+cd backend
+npm install
+npm run start:dev
+```
+
+## What's missing
+
+I built the interface first and ran out of time on the rest. The next steps would be:
+
+- [ ] Data models for users, leave requests, and holidays
+- [ ] Authentication (sign up, login, email confirmation, password reset)
+- [ ] API endpoints to create, approve, and reject requests
+- [ ] Connecting the frontend to the API (axios is already installed)
+- [ ] Email notifications for requests and decisions
+
+## About this project
+
+My first practical project outside of university, built during an unpaid internship at Crayon that I did for my university's practice requirement. I had the freedom to choose what to build, so I designed and built the frontend myself, which is where I learned Svelte and shadcn-svelte and built a component-based UI (35+ components across two roles). I focused on the design and structure of the frontend and didn't get to the backend.
